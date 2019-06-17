@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="icon" href="/images/leaf.ico">
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="main">         
+                <header>
+                    <img src="/images/logo-v3.png" alt="Company logo" id="logo">
+                    <div id="menu">
+                        <a href="/index.html">HOME</a>
+                        <a href="/services.html" id="services">SERVICES</a>
+                        <a href="#" id="contact">CONTACT</a>
+                    </div>
+                </header>
+
+                <main>
+                    <h1>Contact Us</h1>
+                    <form id="form" class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="first-name-input">First Name *</label>
+                                    <input autocomplete="off" type="text" class="form-control" id="first-name-input" placeholder="First name" required>
+                    
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please Enter a First Name.
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="last-name-input">Last Name *</label>
+                                    <input autocomplete="off" type="text" class="form-control" id="last-name-input" placeholder="Last name" required>
+                    
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please Enter a Last Name.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input autocomplete="off" type="text" class="form-control" placeholder="###" required>
+                                </div>
+                                <div class="col">
+                                    <input autocomplete="off" type="text" class="form-control" placeholder="###" required>
+                                </div>
+                                <div class="col">
+                                    <input autocomplete="off" type="text" class="form-control" placeholder="####" required>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="email-input">Email *</label>
+                            <input type="text" autocomplete="off" class="form-control inline" id="email-input" placeholder="Email" required>
+                    
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Please Enter a Name.
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="details-textarea">Details</label>
+                            <textarea autocomplete="off" class="form-control" id="details-textarea" rows="3"></textarea>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="details-select">Services *</label><br>
+                            <select name="Services" id="details-select">
+                                <option selected value="Base Plan">Base Plan</option>
+                                <option value="Aeration">Aeration</option>
+                                <option value="Trimming of small trees, shrubs, and hedges">Trimming of small trees, shrubs, and hedges</option>
+                            </select>
+                        </div>
+                    
+                        <div class="form-group">
+                            <button id="sumbit" type="submit" class="btn btn-dark">Submit</button>
+                        </div>
+                        
+                    </form>
+                </main>
+            </div> 
+        </div>
+
+        <footer id="footer" style="float: left;">
+            <div id="section-1">
+                <span>Lawn satisfaction guaranteed!</span>
+                <a href="/contact.html">LET'S GET STARTED &rarr;</a>
+            </div>
+            
+            <div id="section-2">
+                <span>613-413-8289</span>
+                <span>greenleaf@gmail.com</span>
+            </div>
+        </footer>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <script>
+            (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    else if (form.checkValidity() === true) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        document.querySelector("form").innerHTML = "Thank you for contacting us! We will respond as soon as possible.";
+                    }
+                    form.classList.add('was-validated');
+                    
+                }, false);
+                });
+            }, false);
+            })();
+        </script>
+    </body>
+</html>
