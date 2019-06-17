@@ -13,8 +13,6 @@
         }
         form.classList.add('was-validated');
         form.innerHTML = "Thanks for contacting us! Someone will be reaching out to you soon.";
-        event.preventDefault();
-        event.stopPropagation();
       }, false);
     });
   }, false);
